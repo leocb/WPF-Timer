@@ -1,0 +1,23 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Timer2._0"
+        mc:Ignorable="d" Height="109.8" Width="560" Topmost="{Binding AllwaysVisible, Mode=TwoWay, Source={x:Static local:MySettings.Default}}" WindowStartupLocation="Manual" Background="{x:Null}" WindowStyle="None" AllowsTransparency="True" Left="100" Top="100" Title="Timer">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{Binding BackgroundColor, Mode=TwoWay, Source={x:Static local:MySettings.Default}}"/>
+        </Grid.Background>
+        <Viewbox Margin="15,5">
+            <Label x:Name="TimeText" Content="00:00" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0"
+                  FontFamily="{Binding FontFamily, Mode=TwoWay, Source={x:Static local:MySettings.Default}}"
+                  FontWeight="{Binding FontWeight, Mode=TwoWay, Source={x:Static local:MySettings.Default}}"
+                  FontStyle="{Binding FontStyle, Mode=TwoWay, Source={x:Static local:MySettings.Default}}">
+                <Label.Foreground>
+                    <SolidColorBrush Color="{Binding ForegroundColor, Mode=TwoWay, Source={x:Static local:MySettings.Default}}"/>
+                </Label.Foreground>
+            </Label>
+        </Viewbox>
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="SetTime"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Timer2._0"
+        mc:Ignorable="d"
+        Title="Definir Tempo" Height="115.6" Width="258" ResizeMode="NoResize" Topmost="{Binding AllwaysVisible, Mode=TwoWay, Source={x:Static local:MySettings.Default}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="button" Content="OK" Grid.Column="2" Margin="5,0,10,0" IsDefault="True" Grid.Row="1" FontWeight="Bold" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Stretch" VerticalAlignment="Top" VerticalContentAlignment="Center" Padding="0,5"/>
+        <xctk:TimePicker x:Name="TimePicker" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="10,5,5,5" Grid.Row="1" EndTime="23:59:59" TimeInterval="0:5:0" Text="" TextAlignment="Right" Format="Custom" FormatString="HH:mm:ss" Value="1/1/2016 0:0:0"/>
+        <Label x:Name="label" Content="Selecione o tempo desejado" Margin="10,10,10,0" Grid.ColumnSpan="3" VerticalContentAlignment="Center" Padding="0"/>
+    </Grid>
+</Window>
